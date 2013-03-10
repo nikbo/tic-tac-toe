@@ -55,7 +55,10 @@ class Check
          @over.winner
          puts "Computer win!"
 
-
+       elsif @fields.A1!=" " && @fields.A2!=" " && @fields.A3!=" " && @fields.B1!=" " && @fields.B2!=" " && @fields.B3!=" " && @fields.C1!=" " && @fields.C2!=" " && @fields.C3!=" "
+         @over.winner
+         puts "Ups, drawn game!"
+       exit
      end
   end
 end
