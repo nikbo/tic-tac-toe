@@ -1,6 +1,8 @@
 class Computer
   def initialize(fields)
     @fields=fields
+    @mas=[@fields.A1,@fields.A2,@fields.A3,@fields.B1,@fields.B2,@fields.B3,@fields.C1,@fields.C2,@fields.C3]
+    @mas.sort_by! {rand}
   end
   def comp_step
     if (@fields.C1==@fields.C2) && @fields.C1=="X" && @fields.C3!="O"
@@ -93,15 +95,29 @@ class Computer
      elsif (@fields.B2==@fields.C3) && @fields.B2=="O" && @fields.A2!="X"
     @fields.A2="X"
 
-     else
-      k=[@A1,@A2,@A3,@B1,@B2,@B3,@C1,@C2,@C3]
-      k.sort_by! {rand}
-      k.each do |el|
-        if el == " "
-          el="O"
-          break
-        end
-      end
+
+
+
+     elsif @mas[0]==" "
+        @mas[0]="O"
+      elsif @mas[1]==" "
+        @mas[1]="O"
+      elsif @mas[2]==" "
+        @mas[2]="O"
+      elsif @mas[3]==" "
+        @mas[3]="O"
+      elsif @mas[4]==" "
+        @mas[4]="O"
+      elsif @mas[5]==" "
+        @mas[5]="O"
+      elsif @mas[6]==" "
+        @mas[6]="O"
+      elsif @mas[7]==" "
+        @mas[7]="O"
+      elsif @mas[8]==" "
+        @mas[8]="O"
+
+
     end
   end
 end

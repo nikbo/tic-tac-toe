@@ -14,10 +14,10 @@ fields.field
 until over.win==1
    puts "Player, your step."
    player_choice=gets.chomp
-   check.checking
-   fields.field
    step.check(player_choice)
+   check.checking
    computer.comp_step
    check.checking
+   fields.field
 end
 
