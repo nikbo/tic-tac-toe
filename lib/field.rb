@@ -10,6 +10,8 @@ class Fields
     @C1=" "
     @C2=" "
     @C3=" "
+    k=[]
+    k.sort_by!{rand}
   end
   def field
     puts "   A B C "
